@@ -29,9 +29,7 @@ def close_connection(cursor,connection):
   
   
 app = Flask(__name__) 
-  
-  
-app.secret_key = 'sadhdks1234'
+app.secret_key = 'development key'
 
 @app.route('/') 
 @app.route('/login', methods =['GET', 'POST']) 
@@ -85,3 +83,6 @@ def register():
     elif request.method == 'POST': 
         msg = 'Please fill out the form !'
     return render_template('register.html', msg = msg) 
+    
+if __name__ == '__main__':
+   app.run(debug=True)
