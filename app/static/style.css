@@ -1,0 +1,46 @@
+            .header{ 
+                padding: 5px 120px; 
+                width: 300px; 
+                height: 200px; 
+                background-color: #ff6347;  
+            } 
+          
+            .border{ 
+                padding: 80px 50px; 
+                background-color: #ff6347; 
+            } 
+  
+            .btn { 
+                padding: 10px 40px; 
+                background-color: #1cd70f;  
+                color: #FFFFFF; 
+                font-style: oblique; 
+                font-weight: bold; 
+                border-radius: 10px; 
+            } 
+  
+            .textbox{ 
+                padding: 10px 40px; 
+                background-color: #ff6347;  
+                text-color: #FFFFFF; 
+                border-radius: 10px; 
+            } 
+                  
+            ::placeholder { 
+                color: #FFFFFF; 
+                opacity: 1; 
+                font-style: oblique; 
+                font-weight: bold; 
+            } 
+  
+            .word{ 
+                color: #FFFFFF; 
+                font-style: oblique; 
+                font-weight: bold; 
+            } 
+  
+            .bottom{ 
+                color: #ff6347; 
+                font-style: oblique; 
+                font-weight: bold; 
+            } 

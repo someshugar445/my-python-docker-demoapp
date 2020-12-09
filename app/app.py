@@ -41,7 +41,7 @@ def login():
         username = request.form['username'] 
         password = request.form['password'] 
         cursor = connect_to_db()
-        cursor.execute('SELECT * FROM accounts WHERE username = % s AND password = % s', (username, password, )) 
+        cursor.execute('SELECT * FROM users WHERE username = % s AND password = % s', (username, password, )) 
         account = cursor.fetchone() 
         if account: 
             session['loggedin'] = True
@@ -69,7 +69,7 @@ def register():
         email = request.form['email'] 
         phone = request.form['phone'] 
         cursor = connect_to_db() 
-        cursor.execute('SELECT * FROM accounts WHERE username = % s', (username, )) 
+        cursor.execute('SELECT * FROM users WHERE username = % s', (username, )) 
         account = cursor.fetchone() 
         if account: 
             msg = 'Account already exists !'
@@ -80,7 +80,7 @@ def register():
         elif not username or not password or not email or not phone: 
             msg = 'Please fill out the form !'
         else: 
-            cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s)', (username, password, email,phone )) 
+            cursor.execute('INSERT INTO users VALUES (NULL, % s, % s, % s)', (username, password, email,phone )) 
             msg = 'You have successfully registered !'
     elif request.method == 'POST': 
         msg = 'Please fill out the form !'
